@@ -1,0 +1,27 @@
+<!-- templates/metrics.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metrics</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-5">
+  <h2 class="text-center mb-4">📊 Evaluation Metrics</h2>
+  <div class="card shadow p-4">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>PSNR:</strong> {{ psnr | round(2) }} dB</li>
+      <li class="list-group-item"><strong>SSIM:</strong> {{ ssim | round(4) }}</li>
+      <li class="list-group-item"><strong>Bit Error Rate (BER):</strong> {{ ber | round(4) }}</li>
+    </ul>
+  </div>
+  <p class="text-muted">Metrics logged to: <code>metrics.csv</code></p>
+
+
+  <div class="mt-4 text-center">
+    <a href="/" class="btn btn-secondary">← Back to Upload Page</a>
+  </div>
+</div>
+</body>
+</html>
